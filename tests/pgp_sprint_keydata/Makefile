@@ -6,6 +6,9 @@ LDFLAGS+= -lnetpgp
 
 all: test
 
+clean:
+	$(RM) *.o test
+
 test: pgp_sprint_keydata.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
